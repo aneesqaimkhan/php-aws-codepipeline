@@ -17,7 +17,7 @@ yum -y remove httpd* php*
 yum install -y php71 php71-cli php71-fpm php71-mysql php71-xml php71-curl php71-opcache php71-pdo php71-gd php71-pecl-apcu php71-mbstring php71-imap php71-pecl-redis php71-mcrypt php71-mysqlnd mod24_ssl
 
 # Install Apache 2.4
-yum -y install httpd24
+yum -y install httpd
 
 # Allow URL rewrites
 sed -i 's#AllowOverride None#AllowOverride All#' /etc/httpd/conf/httpd.conf
