@@ -51,7 +51,3 @@ if [ ! -f "/usr/bin/aws" ]; then
     ./awscli-bundle/install -b /usr/bin/aws
 fi
 
-# Ensure AWS Variables are available
-if [[ -z "$AWS_ACCOUNT_ID" || -z "$AWS_DEFAULT_REGION " ]]; then
-    echo "AWS Variables Not Set.  Either AWS_ACCOUNT_ID or AWS_DEFAULT_REGION"
-fi
