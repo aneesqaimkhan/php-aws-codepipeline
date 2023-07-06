@@ -23,11 +23,7 @@ yum -y install httpd24
 sed -i 's#AllowOverride None#AllowOverride All#' /etc/httpd/conf/httpd.conf
 
 # Change apache document root
-mkdir -p /var/www/html/public
-sed -i 's#DocumentRoot "/var/www/html"#DocumentRoot "/var/www/html/public"#' /etc/httpd/conf/httpd.conf
 
-# Change apache directory index
-sed -e 's/DirectoryIndex.*/DirectoryIndex index.html index.php/' -i /etc/httpd/conf/httpd.conf
 
 # Get Composer, and install to /usr/local/bin
 if [ ! -f "/usr/local/bin/composer" ]; then
@@ -44,10 +40,5 @@ service httpd start
 # Setup apache to start on boot
 chkconfig httpd on
 
-# Ensure aws-cli is installed and configured
-if [ ! -f "/usr/bin/aws" ]; then
-    curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
-    unzip awscli-bundle.zip
-    ./awscli-bundle/install -b /usr/bin/aws
-fi
+
 
