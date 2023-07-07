@@ -1,1 +1,2 @@
-chmod +x scripts/stop_server.sh
+#!/bin/bash
+service httpd stop
