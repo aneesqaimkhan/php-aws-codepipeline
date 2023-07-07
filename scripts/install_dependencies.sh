@@ -5,7 +5,7 @@
 yum -y remove httpd* php*
 
 # Install PHP 7.1
-sudo amazon-linux-extras install -y lamp-mariadb10.2-php7.4 php7.4
+sudo amazon-linux-extras install -y lamp-mariadb10.2-php7.2 php7.2
 # Install Apache 2.4
 sudo yum install -y httpd mariadb-server
 
