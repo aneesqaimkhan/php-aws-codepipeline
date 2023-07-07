@@ -1,2 +1,2 @@
 #!/bin/bash
-service httpd stop
+/bin/systemctl stop httpd.service
